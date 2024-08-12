@@ -27,4 +27,4 @@ jobs:
       - name: Install the project dependencies
         run: poetry install
       - name: Run the scraper
-        run: python autotrader_scraper/scrape.py
+        run: poetry run python autotrader_scraper/scrape.py
