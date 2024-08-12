@@ -28,3 +28,13 @@ jobs:
         run: poetry install
       - name: Run the scraper
         run: poetry run python autotrader_scraper/scrape.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "taylordunn"
+          git config user.email "t.dunn19@gmail.com"
+          git add data/*.csv
+          git commit -m "update data"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
