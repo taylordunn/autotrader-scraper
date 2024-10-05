@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 0 * * *" # run every day at midnight
+    - cron: "0 0 * * SUN" # run every Sunday
   push:
     branches-ignore: [] # will also run when pushed to any branch
 
